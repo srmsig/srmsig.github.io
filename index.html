@@ -1,541 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SRM-SIG</title>
-<meta name="description" content="">
-<meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SRM-SIG</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<!-- Favicons
+  <!-- Favicons
     ================================================== -->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
 
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-<!-- Stylesheet
+  <!-- Stylesheet
     ================================================== -->
-<link rel="stylesheet" type="text/css"  href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="js/modernizr.custom.js"></script>
-<style>
-    mark { 
-    background-color: white;
-    color: black;
-}
-div.gallery {
-border: 1px solid #ccc;
-}
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/modernizr.custom.js"></script>
+  <style>
+    mark {
+      background-color: white;
+      color: black;
+    }
 
-div.gallery:hover {
-border: 1px solid #777;
-}
+    div.gallery {
+      border: 1px solid #ccc;
+    }
 
-div.gallery img {
-width: 100%;
-height: auto;
-}
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
 
-div.desc {
-padding: 15px;
-text-align: center;
-}
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
 
-* {
-box-sizing: border-box;
-}
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
 
-.responsive {
-padding: 0 6px;
-float: left;
-width: 24.99999%;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-@media only screen and (max-width: 700px){
-.responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-}
-}
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
 
-@media only screen and (max-width: 500px){
-.responsive {
-    width: 100%;
-}
-}
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
 
-.clearfix:after {
-content: "";
-display: table;
-clear: both;
-}
-</style>
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
 
 
 </head>
+
 <body>
-<!-- Navigation
+  <!-- Navigation
     ==========================================-->
-<nav id="menu" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-           <a class="color" href="index.html"> <img src="img/s.png" height="60" width="100"></a>
-        
-     <a class="navbar-brand" class="color" href="index.html">SRM-SIG</a>
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span
+            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="color" href="index.html"> <img src="img/s.png" height="60" width="100"></a>
+
+        <a class="navbar-brand" class="color" href="index.html">SRM-SIG</a>
 
 
       </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home" class="page-scroll">Home</a></li>
-        <li><a href="#about-section" class="page-scroll">Our Vision</a></li>
-        <li><a href="#services-section" class="page-scroll">Events</a></li>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home" class="page-scroll">Home</a></li>
+          <li><a href="#about-section" class="page-scroll">Our Vision</a></li>
+          <li><a href="#services-section" class="page-scroll">Events</a></li>
           <li><a href="#data" class="page-scroll">Data Repositories</a></li>
-        <li><a href="#works-section" class="page-scroll">Guests</a></li>
-        <li><a href="#team-section" class="page-scroll">Statistics</a></li>
-       <!-- <li><a href="#contact-section" class="page-scroll">Contact</a></li>-->
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-fluid -->
-</nav>
-
-<!-- Header -->
-<header class="text-center" name="home">
-  <div class="intro-text">
-
-    <h1> <span style="color: white; text-shadow: 1px 1px 2px green, 0 0 25px green, 0 0 5px green;">Department of Computer Science and Engineering</span></h1>
-    <p><b style="color: white; text-shadow: 1px 1px 2px green, 0 0 25px green, 0 0 5px green;"><i>SIG(Special Interest Group)<br><br>Data Mining and Big Data Analytics</i></b></p><br>
-    <p><a href="http://www.srmuniv.ac.in/cse/faculty/e-poovammal" style="color: white; text-shadow: 1px 1px 2px green, 0 0 25px green, 0 0 5px green;"><b><i>Dr.E.Poovammal</i></b></a><br>  
-       <b style="color: white; text-shadow: 1px 1px 2px green, 0 0 25px green, 0 0 5px green;"><i> Mail ID: dataminingsig@gmail.com<br>
-        Phone:9444460822
-        </i></b></p>
-    <div class="clearfix"></div>
-    <a href="#about-section" class="btn btn-default btn-lg page-scroll">Learn More</a> </div>
-</header>
-<!-- About Section -->
-<div id="about-section">
-  <div class="container">
-    <div class="section-title">
-      <h2 style="color:black;">Our Vision</h2>
-      <hr>
-    </div>
-    <div class="space"></div>
-    <div class="row">
-      <div class="col-md-4">
-        <h4 style="color:black;">Vision</h4>
-        <p style="color:black;" align="justify">Transformation is definite. Implementation of an effective data mining work / interest group across the department enables the interested people to learn, utilize the resources and share the knowledge quickly in the dynamic domain of data mining. This group aids everyone to make strategic decision on research and to receive fund accordingly.</p>
+          <li><a href="#works-section" class="page-scroll">Guests</a></li>
+          <li><a href="#team-section" class="page-scroll">Team</a></li>
+          <!-- <li><a href="#contact-section" class="page-scroll">Contact</a></li>-->
+        </ul>
       </div>
-      <div class="col-md-4">
-        <h4 style="color:black;">Objectives</h4>
-        <p style="color:black;" align="justify">1.To develop a platform for exploring and exploiting.<br>
-
-          2.To provide a 360-degree view about Data mining.<br>
-          
-          3.To establish a working group, to identify challenges and to provide cost effective solutions.<br>
-          
-          4.To stretch opportunities and to encourage researchers in the domain of data mining.
-          </p>
-      </div>
-      <div class="col-md-2">
-        <h4 style="color:black;">Tools Used</h4>
-        <p style="color:black;" align="justify">
-          1.Weka<br>
-          2.R<br> 
-          3.Python<br> 
-          4.Protege 4.3<br>
-          5.XL Miner<br>
-          6.Rapid Miner<br>
-          7.knime<br>
-          6.Orange<br>
-          9.Keel Suite 3.0<br>
-          10.Data Melt
-          </p>
-      </div>
-        <div class="col-md-2">
-        <p style="color:black;" align="justify">
-            <br>
-            <br>
-          11.Data Preparator 1.7<br>
-          12.Qlikview<br> 
-          13.Trifacta<br> 
-          14.Tanagra<br>
-          </p>
-      </div>
+      <!-- /.navbar-collapse -->
     </div>
-  </div>
-</div>
-<div id="services-section">
-  <div class="container">
-    <div class="section-title">
-        <h2 style="color:black;">NWBAT-2017</h2>
-      <h4 style="color:black;">National Workshop on Big Data Analytics Tools<br><br>23rd February - 27th February 2017
-          </h4>
-        <p style="color:black;" align="justify">The Special Interest Group (SIG)-Data mining / Big data of Department of Computer Science and Engineering of SRM University, Kattankulathur in association with IET (The Institution of Engineering and Technology) has organized a five days National Workshop on Big Data Analytics Tools - NWBAT-2017 from 23rd February - 27th February 2017. The IET professional members are sponsored to attend the workshop by IET Chennai Network. More than 60 IET professional members and 9 Non-IET members registered for the course. The budget for the workshop is 2.16 lakhs for the five days. Rs. 96000 was sponsored by SRM and remaining money of 1.2 lakh was sponsored by IET-CLN. Exposure to advanced technologies and hands-on training on open source tools such as Hadoop, R and E-views help the teaching community to guide the students on cutting edge tools. Hence, this kind of workshops are organized with the support of SRM University.<br><br></p>
-        
-      <hr>
-    </div>
-        <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img/1.JPG">
-      <img src="img/1.JPG" alt="NWBAT 2017" width="400" height="300">
-    </a>
-    <div class="desc">Workshop in Progress</div>
-  </div>
-</div>
-               <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img/2.JPG">
-      <img src="img/2.JPG" alt="NWBAT 2017" width="400" height="300">
-    </a>
-    <div class="desc">Felicitation of Guests</div>
-  </div>
-</div>
-               <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img/3.JPG">
-      <img src="img/3.JPG" alt="NWBAT 2017" width="400" height="300">
-    </a>
-    <div class="desc">Experts Speech</div>
-  </div>
-</div>
-               <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img/4.JPG">
-      <img src="img/4.JPG" alt="NWBAT 2017" width="400" height="300">
-    </a>
-    <div class="desc">Team NWBAT '17</div>
-  </div>
-</div>
-  </div>
-</div>
+    <!-- /.container-fluid -->
+  </nav>
 
-<div id="services-section">
+  <!-- Header -->
+  <header class="text-center" name="home">
+    <div class="intro-text">
+
+      <h1> <span style="color: white; text-shadow: 1px 1px 2px green, 0 0 25px green, 0 0 5px green;">Department of
+          Computer Science and Engineering</span></h1>
+      <p><b style="color: white; text-shadow: 1px 1px 2px green, 0 0 25px green, 0 0 5px green;"><i>SIG(Special Interest
+            Group)<br><br>Data Mining and Big Data Analytics</i></b></p><br>
+      <p><a href="http://www.srmuniv.ac.in/cse/faculty/e-poovammal"
+          style="color: white; text-shadow: 1px 1px 2px green, 0 0 25px green, 0 0 5px green;"><b><i>Dr.E.Poovammal</i></b></a><br>
+        <b style="color: white; text-shadow: 1px 1px 2px green, 0 0 25px green, 0 0 5px green;"><i> Mail ID:
+            dataminingsig@gmail.com<br>
+            Phone:9444460822
+          </i></b></p>
+      <div class="clearfix"></div>
+      <a href="#about-section" class="btn btn-default btn-lg page-scroll">Learn More</a>
+    </div>
+  </header>
+  <!-- About Section -->
+  <div id="about-section">
     <div class="container">
       <div class="section-title">
-          <h2 style="color:black;">NWBAT-2018</h2>
-          <h4 style="color:black;">National Workshop on Big Data Analytics Tools<br><br>06th-10th February 2018
-              </h4>
-          <p style="color:black;" align="justify">The Special Interest Group (SIG)-Data mining / Big data of Department of Computer Science and Engineering of SRM IST, Kattankulathur in association with IET (The Institution of Engineering and Technology) has organized a five days National Workshop on Big Data Analytics Tools - NWBAT-2018 from 06th February - 10th February 2018.
-
-                  <br><br>Dr.E. Poovammal, Professor, Department of CSE is the convener of the workshop. Mrs.P. Akilandeswari and Mr.Eliazer are the co-conveners of the workshop. The details of the workshop are available at the link: https://nwbat.github.io/
-                  More than 40 IET professional members and 20 Non_IET have attended the workshop, sponsored by IET Chennai Network.
-                  
-                  <br><br>Exposure to advanced technologies and hands-on training on open source tools such as R, MATLAB, PYTHON, MOA, and E-views help the teaching community to guide the students on cutting-edge tools. Hence, this kind of workshops are organized with the support of SRM Institute of Science & Technology.
-                  <br><br></p>
+        <h2 style="color:black;">Our Vision</h2>
         <hr>
       </div>
-     
-          <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="img/a.jpg">
-        <img src="img/a.jpg" alt="NWBAT 2017" width="400" height="300">
-      </a>
-      <div class="desc">Certificates to Participants</div>
+      <div class="space"></div>
+      <div class="row">
+        <div class="col-md-4">
+          <h4 style="color:black;">Vision</h4>
+          <p style="color:black;" align="justify">Transformation is definite. Implementation of an effective data mining
+            work / interest group across the department enables the interested people to learn, utilize the resources
+            and share the knowledge quickly in the dynamic domain of data mining. This group aids everyone to make
+            strategic decision on research and to receive fund accordingly.</p>
+        </div>
+        <div class="col-md-4">
+          <h4 style="color:black;">Objectives</h4>
+          <p style="color:black;" align="justify">1.To develop a platform for exploring and exploiting.<br>
+
+            2.To provide a 360-degree view about Data mining.<br>
+
+            3.To establish a working group, to identify challenges and to provide cost effective solutions.<br>
+
+            4.To stretch opportunities and to encourage researchers in the domain of data mining.
+          </p>
+        </div>
+        <div class="col-md-2">
+          <h4 style="color:black;">Tools Used</h4>
+          <p style="color:black;" align="justify">
+            1.Weka<br>
+            2.R<br>
+            3.Python<br>
+            4.Protege 4.3<br>
+            5.XL Miner<br>
+            6.Rapid Miner<br>
+            7.knime<br>
+            6.Orange<br>
+            9.Keel Suite 3.0<br>
+            10.Data Melt
+          </p>
+        </div>
+        <div class="col-md-2">
+          <p style="color:black;" align="justify">
+            <br>
+            <br>
+            11.Data Preparator 1.7<br>
+            12.Qlikview<br>
+            13.Trifacta<br>
+            14.Tanagra<br>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-                 <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="img/b.jpg">
-        <img src="img/b.jpg" alt="NWBAT 2017" width="400" height="300">
-      </a>
-      <div class="desc">Team NWBAT '18</div>
+  <div id="services-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color:black;">NWBAT-2017</h2>
+        <h4 style="color:black;">National Workshop on Big Data Analytics Tools<br><br>23rd February - 27th February 2017
+        </h4>
+        <p style="color:black;" align="justify">The Special Interest Group (SIG)-Data mining / Big data of Department of
+          Computer Science and Engineering of SRM University, Kattankulathur in association with IET (The Institution of
+          Engineering and Technology) has organized a five days National Workshop on Big Data Analytics Tools -
+          NWBAT-2017 from 23rd February - 27th February 2017. The IET professional members are sponsored to attend the
+          workshop by IET Chennai Network. More than 60 IET professional members and 9 Non-IET members registered for
+          the course. The budget for the workshop is 2.16 lakhs for the five days. Rs. 96000 was sponsored by SRM and
+          remaining money of 1.2 lakh was sponsored by IET-CLN. Exposure to advanced technologies and hands-on training
+          on open source tools such as Hadoop, R and E-views help the teaching community to guide the students on
+          cutting edge tools. Hence, this kind of workshops are organized with the support of SRM University.<br><br>
+        </p>
+
+        <hr>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/1.JPG">
+            <img src="img/1.JPG" alt="NWBAT 2017" width="400" height="300">
+          </a>
+          <div class="desc">Workshop in Progress</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/2.JPG">
+            <img src="img/2.JPG" alt="NWBAT 2017" width="400" height="300">
+          </a>
+          <div class="desc">Felicitation of Guests</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/3.JPG">
+            <img src="img/3.JPG" alt="NWBAT 2017" width="400" height="300">
+          </a>
+          <div class="desc">Experts Speech</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/4.JPG">
+            <img src="img/4.JPG" alt="NWBAT 2017" width="400" height="300">
+          </a>
+          <div class="desc">Team NWBAT '17</div>
+        </div>
+      </div>
     </div>
   </div>
-                 <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="img/c.jpg">
-        <img src="img/c.jpg" alt="NWBAT 2017" width="400" height="300">
-      </a>
-      <div class="desc">Workshop in action</div>
-    </div>
-  </div>
-                 <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="img/d.jpg">
-        <img src="img/d.jpg" alt="NWBAT 2017" width="400" height="300">
-      </a>
-      <div class="desc">Felicitation of guests</div>
-    </div>
-  </div>
+
+  <div id="services-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color:black;">NWBAT-2018</h2>
+        <h4 style="color:black;">National Workshop on Big Data Analytics Tools<br><br>06th-10th February 2018
+        </h4>
+        <p style="color:black;" align="justify">The Special Interest Group (SIG)-Data mining / Big data of Department of
+          Computer Science and Engineering of SRM IST, Kattankulathur in association with IET (The Institution of
+          Engineering and Technology) has organized a five days National Workshop on Big Data Analytics Tools -
+          NWBAT-2018 from 06th February - 10th February 2018.
+
+          <br><br>Dr.E. Poovammal, Professor, Department of CSE is the convener of the workshop. Mrs.P. Akilandeswari
+          and Mr.Eliazer are the co-conveners of the workshop. The details of the workshop are available at the link:
+          https://nwbat.github.io/
+          More than 40 IET professional members and 20 Non_IET have attended the workshop, sponsored by IET Chennai
+          Network.
+
+          <br><br>Exposure to advanced technologies and hands-on training on open source tools such as R, MATLAB,
+          PYTHON, MOA, and E-views help the teaching community to guide the students on cutting-edge tools. Hence, this
+          kind of workshops are organized with the support of SRM Institute of Science & Technology.
+          <br><br></p>
+        <hr>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/a.jpg">
+            <img src="img/a.jpg" alt="NWBAT 2017" width="400" height="300">
+          </a>
+          <div class="desc">Certificates to Participants</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/b.jpg">
+            <img src="img/b.jpg" alt="NWBAT 2017" width="400" height="300">
+          </a>
+          <div class="desc">Team NWBAT '18</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/c.jpg">
+            <img src="img/c.jpg" alt="NWBAT 2017" width="400" height="300">
+          </a>
+          <div class="desc">Workshop in action</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/d.jpg">
+            <img src="img/d.jpg" alt="NWBAT 2017" width="400" height="300">
+          </a>
+          <div class="desc">Felicitation of guests</div>
+        </div>
+      </div>
     </div>
   </div>
 
 
-<!-- Services Section -->
-<div id="data">
-  <div class="container">
-    <div class="section-title">
-      <h2 style="color:black;"><br><br><br>Data Repositories</h2>
-      <hr>
+  <!-- NWBAT 2020 -->
+  <div id="services-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color:black;">NWBAT-2019</h2>
+        <h4 style="color:black;">National Workshop on Big Data Analytics Tools<br><br>20th-24th August 2019
+        </h4>
+        <p style="color:black;" align="justify">The Special Interest Group (SIG)-Data mining / Big data of Department of
+          Computer Science and Engineering of SRM IST, Kattankulathur in association with IET (The Institution of
+          Engineering and Technology) has organized a five days National Workshop on Big Data Analytics Tools -
+          NWBAT-2019 from 20th August - 24th August 2019.
+
+          <br><br>Dr.E. Poovammal, Professor, Department of CSE was the Chairperson of the workshop. Mr.M.Eliazer was
+          the Convener, Mrs.P.Akilandeswari
+          and Dr. M.Uma Devi were the co-conveners of the workshop. The details of the workshop are available at the
+          link:
+          https://nwbat.github.io/
+          More than 40 IET professional members and 20 Non_IET have attended the workshop, sponsored by IET Chennai
+          Network.
+
+          <br><br>Exposure to advanced technologies and hands-on training on open source tools such as R, MATLAB,
+          PYTHON, MOA, and E-views help the teaching community to guide the students on cutting-edge tools. Positibe
+          feedback was provided by the participants. Instead of lecturing, the sessions were engaged by lot of hands on
+          training. Materials given by the resource person were mailed to the participants to work further. The
+          organizing committee thanks the IET officials and SRM management for sponsoring this successful workshop.
+
+          <br><br></p>
+        <hr>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/p.jpg">
+            <img src="img/p.jpg" alt="NWBAT 2019" width="400" height="300">
+          </a>
+          <div class="desc">Award Ceremony</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/q.jpg">
+            <img src="img/q.jpg" alt="NWBAT 2019" width="400" height="300">
+          </a>
+          <div class="desc">Workshop in action</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="img/r.jpg">
+            <img src="img/r.jpg" alt="NWBAT 2010" width="400" height="300">
+          </a>
+          <div class="desc">Workshop in action</div>
+        </div>
+      </div>
     </div>
-    <div class="space"></div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
-        <h4 style="color:black;">General</h4>
-        <p><a href="http://vismod.media.mit.edu/vismod/classes/mas622-00/datasets/">Yale Face Databse</a><br>
-          <a href="https://www.geonames.org/export/">Geonames Dataset</a>
+  </div>
+
+
+  <!-- FDP ON DATA SCIENCE -->
+  <!-- NWBAT 2020 -->
+  <div id="services-section">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color:black;">FDP on Data Science - 2020</h2>
+        <h4 style="color:black;">Faculty Development Program on Data Science<br><br>28th July – 31st July 2020
+        </h4>
+        <p style="color:black;" align="justify">We as a team of the SIG “Data Mining Analytics” felt the need to share
+          the knowledge related to data science and provide hands on training with practice exercises to participants,
+          currently being followed. Thus the faculty development programme is planned to provide insight into data
+          science tools and techniques. This programme is planned in a way to enable faculty members to acquire
+          knowledge related to data science to considerable level with satisfaction.
+
+
+          <br><br>Dr. B. Amutha, Professor & Head, Department of CSE was the Chairperson of the workshop.
+
+          <br><br>The FDP focused on an innovative approach towards conducting such events by adapting “FLIPPED
+          CLASSROOM” pattern. This mode of teaching and learning was provided as a hand-on session by IITB (IIT -
+          BOMBAY), we decided to use the same in our FDP. Through this approach we provided flexible timing for our
+          participants to view the course content delivery in the form of videos.
+
+          <br><br>
+          The involvement of the participants during the session indicates that the sessions were up-to the expectation
+          of the participants. The facilitators of the programmehad an interactive session with the participants and
+          hence at least couple of modifications is expected to happen in the mode of content and hands on session
+          delivery.
+        </p>
+        <hr>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div id="data">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color:black;"><br><br><br>Data Repositories</h2>
+        <hr>
+      </div>
+      <div class="space"></div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
+          <h4 style="color:black;">General</h4>
+          <p><a href="http://vismod.media.mit.edu/vismod/classes/mas622-00/datasets/">Yale Face Databse</a><br>
+            <a href="https://www.geonames.org/export/">Geonames Dataset</a>
 
             <br>
             <a href="http://openflights.org/data.html">Flight Dataset</a>
-            
+
             <br>
             <a href="https://archive-it.org">Website Info</a>
-            
+
             <br>
             <a href="http://labrosa.ee.columbia.edu/millionsong">Songs Dataset</a>
-            
+
             <br>
             <a href="http://www.biolab.si/app/hint/car_dataset.html">Car Dataset</a>
             <br>
-            </p>
-      </div>
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
-        <h4 style="color:black;">Text Mining and UCI Repository</h4>
-        <p>
-            <a href="http://www.cs.umb.edu/~smimarog/textmining/datasets/">Text Mining Dataset</a>
-          <br>
-          <a href="https://archive.ics.uci.edu/ml/datasets.html">UCI Repository</a>
           </p>
-      </div>
-        
+        </div>
         <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
-        <h4 style="color:black;">Geographical and Indian Government Data sets</h4>
-        <p>
-            <a href="http://catalog.data.gov/dataset/cities-and-towns-of-the-united-states-direct-download">Cities and Towns of USA</a>
+          <h4 style="color:black;">Text Mining and UCI Repository</h4>
+          <p>
+            <a href="http://www.cs.umb.edu/~smimarog/textmining/datasets/">Text Mining Dataset</a>
             <br>
-            <a href="http://catalog.data.gov/dataset/housing-affordability-data-system-hads">Housing Affordability- Indian gov</a>
-            
+            <a href="https://archive.ics.uci.edu/ml/datasets.html">UCI Repository</a>
+          </p>
+        </div>
+
+        <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
+          <h4 style="color:black;">Geographical and Indian Government Data sets</h4>
+          <p>
+            <a href="http://catalog.data.gov/dataset/cities-and-towns-of-the-united-states-direct-download">Cities and
+              Towns of USA</a>
             <br>
-            
+            <a href="http://catalog.data.gov/dataset/housing-affordability-data-system-hads">Housing Affordability-
+              Indian gov</a>
+
+            <br>
+
             <a href="http://www.data.gov.in/">Indian Datasets by govt. of India</a>
 
 
-            </p>
+          </p>
+        </div>
+
+        <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
+          <h4 style="color:black;">Brochure</h4>
+          <p>
+            <a href="img/srmsig.pdf" download="bro">
+              Click here to download brochure.
+            </a>
+          </p>
+        </div>
+
       </div>
-        
-      <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
-        <h4 style="color:black;">Brochure</h4>
-        <p>
-            <a href="img/srmsig.pdf"  download="bro">
-    Click here to download brochure.
-</a>
+    </div>
+
+
+
+
+    <!-- Portfolio Section -->
+    <div id="works-section">
+      <div class="container">
+        <!-- Container -->
+        <div class="section-title">
+          <h2 style="color:black;">Guests</h2>
+          <hr>
+          <div class="clearfix"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4></h4>
+            <p style="color:black;" align="justify">1.Mr.Joy Mustafi.<br>
+
+              Principal Applied<br>
+
+              Scientist,Microsoft<br>
+
+              Hyderabad,India<br><br>
+
+              2.Dr.Rudra Prakash Pradhan.<br>
+
+              Associate Professor,<br>
+
+              IIT Kharagpur,India<br><br>
+
+              3.Dr.Padi Tirupathi Rao.<br>
+
+              Professor<br>
+
+              Pondicherry University<br><br>
+
+              4.Dr.Rituparna Sen.<br>
+
+              Assistant Professor,<br>
+
+              Indian Statistical<br>
+
+              Institute,Chennai<br><br>
             </p>
+          </div>
+          <div class="col-md-4">
+
+            <p style="color:black;" align="justify"><br><br>5.Mr.Rajkumar Subramnian<br>
+
+              Senior Manager,Business<br>
+
+              Technology<br>
+
+              Solutions,Scope Eknowledge<br>
+
+              Pvt Ltd.<br><br>
+
+              6.Mr.Ashish Kumar Roy.<br>
+
+              Solution Architect in
+
+              Ericsson<br><br>
+
+              7.Dr.S.Geetha.<br>
+
+              Professor<br>
+
+              Department of CSE,
+
+              VIT University<br><br>
+
+              8.Dr.V.Pattabiraman<br>
+
+              Associate Professor<br>
+
+              Department of CSE<br>
+
+              VIT University<br><br>
+
+            </p>
+          </div>
+          <!-- third column -->
+          <div class="col-md-4">
+
+            <p style="color:black;" align="justify"><br><br>9. Dr. Suresh Jaganathan<br>
+
+              Associate Professor<br>
+
+              SSN College of Engineering<br>
+
+              Chennai, India<br><br>
+
+              10. Dr. Nanthini V.P<br>
+
+
+              Data Science consultant<br>
+              Chennai, Tamil Nadu<br><br>
+
+              11.Dr.R.Ragupathy<br>
+
+              Associate Professor<br>
+
+              Annamalai University<br>
+              Annamalai Nagar
+
+            </p>
+          </div>
+        </div>
       </div>
-        
-  </div>
-</div>
-
-
-
-
-<!-- Portfolio Section -->
-<div id="works-section">
-  <div class="container"> <!-- Container -->
-    <div class="section-title">
-      <h2 style="color:black;">Guests</h2>
-      <hr>
-      <div class="clearfix"></div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-<h4></h4>
-<p style="color:black;" align="justify">1.Mr.Joy Mustafi.<br>
-
-    Principal Applied<br>
-    
-    Scientist,Microsoft<br>
-    
-    Hyderabad,India<br><br>
-    
-    2.Dr.Rudra Prakash Pradhan.<br>
-    
-    Associate Professor,<br>
-    
-    IIT Kharagpur,India<br><br>
-    
-    3.Dr.Padi Tirupathi Rao.<br>
-    
-    Professor<br>
-    
-    Pondicherry University<br><br>
-    
-    4.Dr.Rituparna Sen.<br>
-    
-    Assistant Professor,<br>
-    
-    Indian Statistical<br>
-    
-    Institute,Chennai<br><br>
-    </p>
-</div><div class="col-md-4">
-
-<p style="color:black;" align="justify"><br><br>5.Mr.Rajkumar Subramnian<br>
-
-    Senior Manager,Business<br>
-    
-    Technology<br>
-    
-    Solutions,Scope Eknowledge<br>
-    
-    Pvt Ltd.<br><br>
-    
-    6.Mr.Ashish Kumar Roy.<br>
-    
-    Solution Architect in
-    
-    Ericsson<br><br>
-    
-    7.Dr.S.Geetha.<br>
-    
-    Professor<br>
-    
-    Department of CSE,
-    
-    VIT University<br><br>
-    
-    8.Dr.V.Pattabiraman<br>
-    
-    Associate Professor<br>
-    
-    Department of CSE<br>
-    
-    VIT University<br><br>
-     
-    </p>
-</div>
-  </div>
-    </div>
     </div>
 
-<style>
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 7px 7px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+    <style>
+      .button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 7px 7px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
 
-.button2 {background-color: #008CBA;} /* Blue */
-.button3 {background-color: #f44336;} /* Red */ 
-.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
-.button5 {background-color: #555555;} /* Black */
-</style>
-    
-<!-- Team Section -->
-<div id="team-section">
-  <div class="container">
-    <div class="row">
-      <p><h1>Statistics</h1><br><br></p>
-                <div class="col-md-12">
-        <p style="color:black;font-size: 20px;"><b><i>No of Members in SIG: 20</i></b><br></p><button onclick="return showt()" class="button"style="font-size: 20px;">Click here to view all the members</button><br>
-                    <script>
-function showt() {
-    var x = document.getElementById("showteachers");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-</script>
-<div id="showteachers" style="display: none;">
-  <ul>
-<li><b><i><a href="http://www.srmuniv.ac.in/faculty/p-akilandeswari">Mrs.Akilandeswari.P</a></b></i></li>
-      <li><b><i><a href="http://www.srmuniv.ac.in/content/rvidhya">Mrs.R.Vidhya</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/c-jayavarthini">Mrs.C.Jayavarthini</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/b-ida-seraphim">Mrs.B.Ida Seraphim</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/faculty/s-s-saranya">Mrs.Saranya S.S</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/j-prathipa">Mrs.J.Prathipa</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/sindhu-c">Mrs.Sindhu C</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/mahalakshmi-p">Ms.Mahalakshmi.P</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/r-radha">Mrs.R.RADHA</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/faculty/ms-saranya-p">Mrs.Saranya P</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/viji-d">Ms.D.Viji</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/lavanya-r">Mrs.R.LAVANYA</a></b></i></li>
-<li><b><i><a href="">Mrs.M.UMA DEVI</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engg-computerscience/faculty-aswathykcherian">Mrs.Aswathy K Cherian</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/harinimurugan">Ms.Harini M</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/content/m-eliazer">Mr.M.Eliazer</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/faculty/dr-s-thenmalar">Dr.S.Thenmalar</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/bsowmiya">Ms.B.Sowmiya</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/cse/faculty/oswald-c">Mr.Oswald c</a></b></i></li>
-<li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/mr-karthik-pc">Mr.P.C.Karthik</a></b></i></li>
-    </ul>  
-</div>
-                    
-        <p align="justify">
-            <font size="14" face="Courier New" >
-          <table width="100%" style="font-size: 20px; background : #efe none; color : #630;">
-            <tr><td></td><td>2017</td><td>2018</td></tr>
-            <tr><td>1.Papers published in Journals</td><td>49</td><td>58</td></tr>
-            <tr><td>2.Papers presented in Conferences</td><td>40</td><td>58</td></tr>
-            <tr><td>3.Endowment Lectures Delivered</td><td>05</td><td>03</td></tr>
-            <tr><td>4.Workshops Attended</td><td>69</td><td>76</td></tr>
-            </table><br>
-          	</font>
+      .button2 {
+        background-color: #008CBA;
+      }
 
-        </p>
-            
-                    <p style="color:black;font-size: 20px;"><br>Number of Patents Filed: 5</p><br>
-                    <p style="color:black;font-size: 20px;">Number of Proposal Submitted: 1</p><br>
+      /* Blue */
+      .button3 {
+        background-color: #f44336;
+      }
 
-          <p style="color:black;font-size: 20px;">Number of UG Projects guided in last 2 years: 120 <br><br>
-            Number of PG Projects guided in last 2 years: 6 <br><br>
-            Book Chapter Contributed: 3</p>
-          
+      /* Red */
+      .button4 {
+        background-color: #e7e7e7;
+        color: black;
+      }
 
-<br>
-<p style="color:black;font-size: 20px"> <br><br><b>PhD Status</b></p><br>
-<p style="color:black;font-size: 20px">Completed: 3<br>Pursuing: 13<br>Yet to start: 1</p>
+      /* Gray */
+      .button5 {
+        background-color: #555555;
+      }
 
-                    <p style="color:black;font-size: 20px"> <br><br><b>Online web-portal developed for the institute:</b></p><br>
+      /* Black */
+    </style>
 
-          <p style="color:black;font-size: 20px">1. SCIF (SRM Central Instrumentation Facility)- <a href="http://scif.srmonline.net/">Link Here</a><br><br>
+    <!-- Team Section -->
+    <div id="team-section">
+      <div class="container">
+        <div class="row">
+          <p>
+          <h1>Team</h1><br><br></p>
+          <div class="col-md-12">
+            <p style="color:black;font-size: 20px;"><b><i>No of Members in SIG: 15</i></b><br></p><button
+              onclick="return showt()" class="button" style="font-size: 20px;">Click here to view all the
+              members</button><br>
+            <script>
+              function showt() {
+                var x = document.getElementById("showteachers");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+            </script>
+            <div id="showteachers" style="display: none;">
+              <ul>
+                <li><b><i><a href="http://www.srmuniv.ac.in/faculty/p-akilandeswari">Mrs.Akilandeswari.P</a></b></i>
+                </li>
+                <li><b><i><a href="http://www.srmuniv.ac.in/content/rvidhya">Mrs.R.Vidhya</a></b></i></li>
+
+                <li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/b-ida-seraphim">Mrs.B.Ida
+                        Seraphim</a></b></i></li>
+                <li><b><i><a href="http://www.srmuniv.ac.in/faculty/s-s-saranya">Mrs.Saranya S.S</a></b></i></li>
+                <li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/sindhu-c">Mrs.Sindhu
+                        C</a></b></i></li>
+                <li><b><i><a
+                        href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/mahalakshmi-p">Ms.Mahalakshmi.P</a></b></i>
+                </li>
+                <li><b><i><a
+                        href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/r-radha">Mrs.R.RADHA</a></b></i>
+                </li>
+                <li><b><i><a href="http://www.srmuniv.ac.in/faculty/ms-saranya-p">Mrs.Saranya P</a></b></i></li>
+                <li><b><i><a href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/viji-d">Ms.D.Viji</a></b></i>
+                </li>
+                <li><b><i><a
+                        href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/lavanya-r">Mrs.R.LAVANYA</a></b></i>
+                </li>
+                <li><b><i><a href="">Mrs.M.UMA DEVI</a></b></i></li>
+                <li><b><i><a href="http://www.srmuniv.ac.in/engg-computerscience/faculty-aswathykcherian">Mrs.Aswathy K
+                        Cherian</a></b></i></li>
+                <li><b><i><a href="http://www.srmuniv.ac.in/content/m-eliazer">Mr.M.Eliazer</a></b></i></li>
+                <li><b><i><a href="http://www.srmuniv.ac.in/faculty/dr-s-thenmalar">Dr.S.Thenmalar</a></b></i></li>
+                <li><b><i><a
+                        href="http://www.srmuniv.ac.in/engineering/dept-cse/faculty/bsowmiya">Ms.B.Sowmiya</a></b></i>
+                </li>
+              </ul>
+            </div>
+
+            <!-- <p align="justify">
+              <font size="14" face="Courier New">
+                <table width="100%" style="font-size: 20px; background : #efe none; color : #630;">
+                  <tr>
+                    <td></td>
+                    <td>2017</td>
+                    <td>2018</td>
+                  </tr>
+                  <tr>
+                    <td>1.Papers published in Journals</td>
+                    <td>49</td>
+                    <td>58</td>
+                  </tr>
+                  <tr>
+                    <td>2.Papers presented in Conferences</td>
+                    <td>40</td>
+                    <td>58</td>
+                  </tr>
+                  <tr>
+                    <td>3.Endowment Lectures Delivered</td>
+                    <td>05</td>
+                    <td>03</td>
+                  </tr>
+                  <tr>
+                    <td>4.Workshops Attended</td>
+                    <td>69</td>
+                    <td>76</td>
+                  </tr>
+                </table><br>
+              </font>
+
+            </p>
+
+            <p style="color:black;font-size: 20px;"><br>Number of Patents Filed: 5</p><br>
+            <p style="color:black;font-size: 20px;">Number of Proposal Submitted: 1</p><br>
+
+            <p style="color:black;font-size: 20px;">Number of UG Projects guided in last 2 years: 120 <br><br>
+              Number of PG Projects guided in last 2 years: 6 <br><br>
+              Book Chapter Contributed: 3</p>
+
+
+            <br>
+            <p style="color:black;font-size: 20px"> <br><br><b>PhD Status</b></p><br>
+            <p style="color:black;font-size: 20px">Completed: 3<br>Pursuing: 13<br>Yet to start: 1</p> -->
+
+            <p style="color:black;font-size: 20px"> <br><br><b>Online web-portal developed for the institute:</b></p>
+            <br>
+
+            <p style="color:black;font-size: 20px">1. SCIF (SRM Central Instrumentation Facility)- <a
+                href="http://scif.srmonline.net/">Link Here</a><br><br>
               2. SHBF (SRM Hall Booking Facility)- <a href="http://shbf.srmuniv.ac.in/">Link Here</a><br><br>
-                    3. SDBTF (SRM DBT Facility)- <a href="http://sdbt.srmuniv.ac.in/">Link Here</a><br><br>
-                    4. SRM - eBazaar- <a href="http://ebazaar.srmuniv.ac.in/">Link Here</a><br><br>
-                    5. SRM NRC (SRM Nanotech Research Center Instrumentation Booking Facility)- <a href="http://nrc.srmonline.net">Link Here</a></p>
-          
+              3. SDBTF (SRM DBT Facility)- <a href="http://sdbt.srmuniv.ac.in/">Link Here</a><br><br>
+              4. SRM - eBazaar- <a href="https://srmebazaar.com/">Link Here</a><br><br>
+              5. SRM NRC (SRM Nanotech Research Center Instrumentation Booking Facility)- <a
+                href="http://nrc.srmonline.net">Link Here</a></p>
 
+
+          </div>
+
+        </div>
       </div>
-     
-  </div>
-  </div>
-</div>
+    </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/SmoothScroll.js"></script>
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="js/jquery.isotope.js"></script>
-<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-<script type="text/javascript" src="js/contact_me.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="js/contact_me.js"></script>
 
-<!-- Javascripts
+    <!-- Javascripts
     ================================================== -->
-<script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
+
 </html>
